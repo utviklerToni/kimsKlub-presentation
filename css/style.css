@@ -40,11 +40,12 @@
 		url('./../assets/purista/Purista-ThinItalic.ttf'),
 		url('./../assets/purista/Purista-ThinItalic.woff'),
 		url('./../assets/purista/Purista-ThinItalic.woff2./..');
+	font-style: normal;
 }
 
 body {
 	font-family: 'Purista';
-	font-weight: 400;
+	font-weight: 300;
 	font-size: 1.5rem;
 	line-height: 1.8;
 }
