@@ -1,0 +1,118 @@
+.btn {
+   &:link,
+   &-visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1.5rem 2.4rem;
+      display: inline-block;
+      transition: all 0.15s;
+      position: relative;
+      font-size: $default-font-size;
+   }
+
+   &:hover {
+      transform: translateY(-0.3rem);
+      box-shadow: 0 0 0.6rem 0.3rem rgba(255, 255, 255, 0.2);
+   }
+
+   &:active {
+      transform: translateY(-0.1rem);
+   }
+
+   &-aqua {
+      border: 0.1rem solid #b0e2ff;
+      color: #b0e3ff;
+      background: linear-gradient(
+         45deg,
+         rgba(42, 60, 70, 0.91),
+         rgba(176, 227, 255, 0.252)
+      );
+
+      &:hover {
+         border: 0.1rem solid transparent;
+         background: linear-gradient(
+            0deg,
+            rgba(90, 86, 64, 0.281),
+            rgba(90, 86, 64, 0.281),
+            rgba(90, 86, 64, 0.281)
+         );
+
+         &::after {
+            background: linear-gradient(
+               45deg,
+               rgba(42, 60, 70, 0.91),
+               rgba(176, 227, 255, 0.252)
+            );
+            transform: scaleX(1.2) scaleY(1.8);
+            opacity: 0;
+         }
+      }
+   }
+
+   &--green {
+      background-color: rgb(27, 37, 44);
+      color: white;
+
+      &:hover {
+         border: 0.1rem solid transparent;
+         background: linear-gradient(0deg);
+
+         &::after {
+            background: linear-gradient(
+               45deg,
+               rgb(22, 31, 36),
+               rgb(28, 35, 46),
+               rgb(11, 16, 27)
+            );
+            transform: scaleX(1.2) scaleY(1.8);
+            opacity: 0;
+         }
+      }
+   }
+
+   &::after {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.3s;
+   }
+}
+
+.btn-text {
+   font-size: 2rem;
+   transition: all 0.3s;
+   color: #b0e2ff;
+   text-decoration: none;
+
+   &:link,
+   &:visited {
+      // background: $color-header-bg-khaki;
+      color: $color-primary-light;
+      display: inline-block;
+      text-decoration: none;
+      padding: 3px;
+      border-bottom: 1px solid $color-header-bg-khaki;
+   }
+
+   &:hover {
+      color: $color-primary;
+      background: $color-header-bg-khaki;
+      box-shadow: 0 1rem 2rem $color-bg-darker;
+      border-bottom: 1px solid $color-header-bg-khaki;
+      transform: translateY(-3px);
+   }
+
+   &:active {
+      box-shadow: 0 0.3rem 1rem rgba($color-bg-darker, 0.15);
+      transform: translateY(0);
+   }
+}
+
+.arrow {
+   font-family: Roboto;
+}

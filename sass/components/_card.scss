@@ -1,0 +1,220 @@
+.card {
+   // functionality
+   position: relative;
+   perspective: 150rem;
+   -moz-perspective: 150rem;
+   height: 54rem;
+
+   &__side {
+      height: 54rem;
+      background-color: rgb(68, 68, 36);
+      color: white;
+      font-size: 3rem;
+      box-shadow: 0 0.3rem 4rem rgba(0, 0, 0, 0.61);
+      transition: all 0.9s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      backface-visibility: hidden;
+      overflow: hidden;
+
+      &--front {
+         background-image: linear-gradient(180deg, #0f1018, #4e5855);
+      }
+
+      &--back {
+         transform: rotateY(180deg);
+
+         &-1 {
+            background-image: linear-gradient(0deg, #0f1018, #4e5855);
+         }
+      }
+   }
+
+   &:hover &__side--front {
+      transform: rotateY(-180deg);
+   }
+
+   &:hover &__side--back {
+      transform: rotateY(0);
+   }
+
+   // front style
+   &__picture {
+      height: 24vh;
+      background-size: cover;
+      background-blend-mode: color-burn;
+
+      &--1 {
+         background-image: linear-gradient(
+               to right bottom,
+               rgba(144, 238, 144, 0.432),
+               rgba(173, 216, 230, 0.226)
+            ),
+            url(../img/webp/gun-range.webp);
+         // background-image: url(../img/pexels-jaime-reimer-2662116.jpg);
+
+         background-position: center;
+      }
+
+      &--2 {
+         background-image: linear-gradient(
+               to right bottom,
+               #0f101863,
+               #4e58555d
+            ),
+            url(../img/webp/hunting.webp);
+         // background-image: url(../img/pexels-jaime-reimer-2662116.jpg);
+         background-position: center;
+      }
+
+      &--3 {
+         background-image: linear-gradient(
+               to right bottom,
+               #d38a7c33,
+               rgba(68, 64, 32, 0.144)
+            ),
+            url(../img/webp/camping-couple.webp);
+         // background-image: url(../img/pexels-jaime-reimer-2662116.jpg);
+
+         background-position: center;
+      }
+   }
+
+   &__heading {
+      font-size: 3rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-align: right;
+      color: antiquewhite;
+      position: absolute;
+      top: 20rem;
+      right: 1rem;
+
+      @include respond(tab-land) {
+         top: 22rem;
+      }
+
+      @include respond(tab-port) {
+         top: 24rem;
+      }
+
+      @include respond(big-desktop) {
+         top: 15rem;
+      }
+   }
+
+   &__heading-span {
+      padding: 0.3rem 1.5rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+
+      &--1 {
+         background-image: linear-gradient(
+            to right bottom,
+            rgba(0, 128, 0, 0.842),
+            rgba(255, 255, 0, 0.658)
+         );
+      }
+
+      &--2 {
+         background-image: linear-gradient(to right bottom, #0f1018, #4e5855);
+      }
+
+      &--3 {
+         background-image: linear-gradient(
+            to right bottom,
+            #d38a7c,
+            rgb(68, 64, 32)
+         );
+      }
+   }
+
+   &__details {
+      ul {
+         list-style: none;
+         width: 81%;
+         margin: 0 auto;
+
+         li {
+            text-align: left;
+            font-size: 1.8rem;
+            padding: 1rem;
+
+            &:not(:last-child) {
+               border-bottom: 1px solid rgba(56, 56, 56, 0.336);
+            }
+         }
+      }
+   }
+
+   // front side style
+   &__cta {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      text-align: center;
+   }
+
+   &__price-box {
+      text-align: center;
+      color: white;
+      margin-bottom: 9rem;
+   }
+
+   &__price-only {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+   }
+
+   &__price-value {
+      font-size: 6.3rem;
+      font-weight: 100;
+   }
+
+   @include respond(tab-port) {
+      height: auto;
+      background-color: rgba(255, 255, 255, 0);
+      box-shadow: 0 0.3rem 4rem rgba(0, 0, 0, 0.61);
+
+      &__side {
+         height: 51rem;
+         position: relative;
+         box-shadow: none;
+
+         &--back {
+            transform: rotateY(0deg);
+            // clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+         }
+      }
+
+      &:hover &__side--front {
+         transform: rotateY(0deg);
+      }
+
+      &__details {
+         padding: 1rem;
+      }
+
+      // front side style
+      &__cta {
+         position: relative;
+         top: 0%;
+         left: 0%;
+         transform: translate(0);
+         width: 99%;
+         padding: 6rem 3rem 3rem 3rem;
+      }
+
+      &__price-box {
+         margin-bottom: 9rem;
+      }
+
+      &__price-value {
+         font-size: 4.2rem;
+      }
+   }
+}

@@ -1,0 +1,58 @@
+.section-adventure {
+   @include respond(tab-port) {
+      padding-bottom: 9rem;
+   }
+}
+
+.experiences {
+   max-width: 81vw;
+   margin: auto;
+
+   & h3 {
+      font-size: 3.6rem;
+   }
+}
+
+.section-about {
+   background-color: $color-grey-light-1;
+   padding: 24rem 0;
+
+   @include respond(tab-port) {
+      padding: 18rem 0;
+   }
+}
+
+.section-features {
+   padding-top: 24rem;
+   padding-bottom: 24rem;
+   background-image: linear-gradient(
+         to right bottom,
+         rgba($color-primary, 0.8),
+         rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/webp/pexels-flo-maderebner-869258__3x.webp);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+
+   @include respond(tab-port) {
+      padding: 12rem 0;
+   }
+}
+
+.section-activities {
+   background-image: linear-gradient(
+      to right bottom,
+      rgba(15, 16, 24, 0.788),
+      rgba(78, 88, 85, 0.781)
+   );
+   // url(../img/pexels-jaime-reimer-2662116.jpg);
+   background-position: bottom;
+   background-size: cover;
+   padding: 12rem 0 15rem 0;
+
+   @include respond(tab-port) {
+      padding-bottom: 12rem;
+      padding-top: 9rem;
+   }
+}

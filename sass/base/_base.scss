@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+
+html {
+   // defining 1rem as
+   font-size: 56.25%;
+
+   @include respond(big-desktop) {
+      font-size: 66%;
+   }
+
+   @include respond(tab-land) {
+      font-size: 54%;
+   }
+
+   @include respond(tab-port) {
+      font-size: 51%; 
+   }
+}
+
+body {
+   background-image: linear-gradient(to right bottom, #0f1018, #4e5855);
+   box-sizing: border-box;
+   color: $color-primary;
+
+  
+}

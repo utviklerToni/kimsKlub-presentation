@@ -1,0 +1,43 @@
+.footer {
+   background-color: #2f3638;
+   font-size: 2rem;
+
+   .flex-footer-nav-items {
+      max-width: 120rem;
+      padding: 3rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: left;
+      gap: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+      list-style: none;
+
+      @include respond(tab-port) {
+         flex-direction: column;
+         align-items: flex-start;
+         padding: 3rem 9rem;
+      }
+
+      @include respond(tab-port) {
+      
+         padding: 3rem 2rem;
+      }
+
+      
+   }
+}
+
+.p-right {
+   padding-right: 0.6rem;
+}
+
+select {
+   background: #1e2425;
+   border: 1px solid #444424;
+   color: white;
+   font-size: 2rem;
+   font-family: Purista;
+   padding: 1.2rem 1.8rem;
+}
