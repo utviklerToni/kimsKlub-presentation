@@ -40,9 +40,6 @@
 		url('./../assets/purista/Purista-ThinItalic.ttf'),
 		url('./../assets/purista/Purista-ThinItalic.woff'),
 		url('./../assets/purista/Purista-ThinItalic.woff2./..');
-
-	font-weight: normal;
-	font-style: normal;
 }
 
 body {
